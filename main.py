@@ -124,14 +124,10 @@ async def on_voice_state_update(member: discord.Member, before, after):
                         channel2 = await guild.create_voice_channel(f'Канал {member.name}', category=maincategory)
                         await member.move_to(channel2)
                     else:
-                        ...
+                        ...#Хахахах какой же говнокод по факту
                     if before.channel is not None and before.channel.category.name == 'Voice':
                             if len(before.channel.members) == 0 and before.channel != after.channel:
                                 await before.channel.delete()
-    elif before.channel is not None and before.channel.category.name == 'Voice':  # Проверка, что пользователь отключился от голосового канала
-        if len(before.channel.members) == 0:  # Проверка, что в канале нет пользователей
-            if before.channel.name != '[+]Создать канал':  # Проверка, что канал не является каналом '+создать канал'
-                await before.channel.delete()
     if before.channel is not None and before.channel.category.name == 'Voice':  
         if len(before.channel.members) == 0:  
             if before.channel.name != '[+]Создать канал':  
