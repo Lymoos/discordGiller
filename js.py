@@ -36,7 +36,7 @@ def takejs(server_name:str = None):#Ended
     except:
         return -1
     
-def takejsN():#Not ENDED
+def takejsN():#ENDED
     try:
         if (host==local): 
             with open('./data/data.json') as data:
